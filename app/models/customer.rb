@@ -13,7 +13,7 @@ class Customer
 
   def self.find_by_name(string)
     @@all.find do |name|
-      name.full_name == string
+      name.full_name.downcase == string.downcase
     end
   end
 
